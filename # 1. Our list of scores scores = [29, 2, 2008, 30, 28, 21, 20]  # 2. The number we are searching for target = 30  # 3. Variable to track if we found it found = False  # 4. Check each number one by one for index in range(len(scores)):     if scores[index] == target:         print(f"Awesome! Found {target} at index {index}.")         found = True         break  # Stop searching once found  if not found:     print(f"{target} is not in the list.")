@@ -1,0 +1,18 @@
+# 1. Our list of scores
+scores = [29, 2, 2008, 30, 28, 21, 20]
+
+# 2. The number we are searching for
+target = 30
+
+# 3. Variable to track if we found it
+found = False
+
+# 4. Check each number one by one
+for index in range(len(scores)):
+    if scores[index] == target:
+        print(f"Awesome! Found {target} at index {index}.")
+        found = True
+        break  # Stop searching once found
+
+if not found:
+    print(f"{target} is not in the list.")
