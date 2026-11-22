@@ -1,0 +1,18 @@
+scores = [45, 78, 92, 65, 88, 99, 54]
+
+# Start with two very small numbers
+largest = -1
+second_largest = -1
+
+for num in scores:
+    if num > largest:
+        # The old largest is now the second largest!
+        second_largest = largest
+        # Update the new champion
+        largest = num
+    elif num > second_largest and num != largest:
+        # If it's smaller than the largest, but bigger than the second largest
+        second_largest = num
+
+print(f"The Largest Score is: {largest}")
+print(f"The Second Largest Score is: {second_largest}")
